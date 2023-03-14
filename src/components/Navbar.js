@@ -6,21 +6,14 @@ const Navbar = () => {
     { text: "Technologies", url: "/" },
     { text: "Contact", url: "/" },
   ];
-  const handleResumeDownload = async () => {
-    // Replace the URL with the URL of your PDF file
-    const pdfUrl =
-      "https://drive.google.com/file/d/1MueAT6fVmV508OBt_dhDh8qrhof5O_qs/view?usp=share_link";
-    const response = await fetch(pdfUrl);
-    const content = await response.blob();
-    const url = URL.createObjectURL(content);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+  
+  const handleResumeDownload = () => {
+    window.open(
+      "https://drive.google.com/file/d/1MueAT6fVmV508OBt_dhDh8qrhof5O_qs/view?usp=sharing",
+      "_blank"
+    );
   };
+
   return (
     <div className="flex justify-end px-5 py-2 text-[#F6E8EA] items-center shadow-xl">
       <ul>
