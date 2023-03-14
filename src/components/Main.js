@@ -6,8 +6,8 @@ const Main = () => {
       <div className="flex justify-center items-center mt-[20vh]">
         <div className="flex-col flex gap-4 w-[40%]  text-[#F6E8EA]">
           <div className="text-lg font-mono">Hello There, I am</div>
-          <div className="text-4xl font-serif">Vaibhav Thorat.</div>
-          <div className="text-xl w-[35vw] font-mono">
+          <div className="text-4xl font-serif text-[#ffffff] font-bold">Vaibhav Thorat.</div>
+          <div className="text-xl w-[35vw] font-mono text-justify">
             I am a Fullstack Web Developer with MERN Stack. Currently residing
             in Amravati, Maharashtra. I am currently working as a Production
             Manager at JH Film Production.
