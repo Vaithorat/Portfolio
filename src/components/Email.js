@@ -35,6 +35,7 @@ export const Email = () => {
         <input
           type="text"
           name="user_name"
+          required
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
       </div>
@@ -43,6 +44,8 @@ export const Email = () => {
         <input
           type="email"
           name="user_email"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
       </div>
@@ -50,6 +53,7 @@ export const Email = () => {
         <label className="block font-bold mb-2">Message</label>
         <textarea
           name="message"
+          required
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
       </div>
