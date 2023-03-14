@@ -6,14 +6,20 @@ const Navbar = () => {
     { text: "Technologies", url: "/" },
     { text: "Contact", url: "/" },
   ];
-  const handleResumeDownload = () => {
+  const handleResumeDownload = async () => {
     // Replace the URL with the URL of your PDF file
-    const pdfUrl = "https://drive.google.com/file/d/1MueAT6fVmV508OBt_dhDh8qrhof5O_qs/view?usp=share_link";
+    const pdfUrl =
+      "https://drive.google.com/file/d/1MueAT6fVmV508OBt_dhDh8qrhof5O_qs/view?usp=share_link";
+    const response = await fetch(pdfUrl);
+    const content = await response.blob();
+    const url = URL.createObjectURL(content);
     const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.setAttribute("download", "resume.pdf");
+    link.href = url;
+    link.download = "resume.pdf";
     document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   };
   return (
     <div className="flex justify-end px-5 py-2 text-[#F6E8EA] items-center shadow-xl">
@@ -26,7 +32,12 @@ const Navbar = () => {
               </a>
             ))}
           </li>
-          <button onClick={handleResumeDownload} className="border-2 px-4 py-1 rounded-lg border-">Resume</button>
+          <button
+            onClick={handleResumeDownload}
+            className="border-2 px-4 py-1 rounded-lg border-"
+          >
+            Resume
+          </button>
         </div>
       </ul>
     </div>
