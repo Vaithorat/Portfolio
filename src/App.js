@@ -10,15 +10,14 @@ import About from "./components/About";
 import GetInTouch from "./components/GetInTouch";
 import { Email } from "./components/Email";
 
-
 const source = [
   {
     name: "crypto",
     github: "https://github.com/Vaithorat/CryptoCurrency-Dashboard",
     imageUrl: crypto,
     deployment: "https://cryptodashboard-alma.netlify.app/",
-    intro: "A crypto-currency dashboard that shows realtime chart data for cryptocurrencies ",
-     
+    intro:
+      "A crypto-currency dashboard that shows realtime chart data for cryptocurrencies ",
   },
   {
     name: "ai",
@@ -26,7 +25,7 @@ const source = [
     imageUrl: ai,
     deployment: "https://dalleimggen.netlify.app/",
     intro:
-      "A Dall-E Api based image generator that either generates a random prompt or takes prompt from user to generate images"
+      "A Dall-E Api based image generator that either generates a random prompt or takes prompt from user to generate images",
   },
   {
     name: "social",
@@ -39,7 +38,6 @@ const source = [
 ];
 
 function App() {
-  
   return (
     <div className="App bg-[#131022] h-full flex">
       <div>
@@ -49,7 +47,7 @@ function App() {
         <Navbar />
         <Main />
         <About />
-        <div className="flex justify-center gap-12">
+        <div className="flex flex-wrap justify-center gap-12 md:justify-center">
           {source.map((item) => (
             <Projects
               key={item.name}
@@ -61,8 +59,9 @@ function App() {
             />
           ))}
         </div>
+
         <GetInTouch />
-        <Email/>
+        <Email />
       </div>
     </div>
   );
