@@ -3,8 +3,8 @@ import Main from "./components/Main";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Projects from "./components/Projects";
-import crypto from "./components/images/1.jfif";
-import ai from "./components/images/2.jfif";
+import crypto from "./components/images/2.jfif";
+import ai from "./components/images/1.jfif";
 import social from "./components/images/3.jfif";
 import About from "./components/About";
 import GetInTouch from "./components/GetInTouch";
@@ -17,8 +17,8 @@ const source = [
     github: "https://github.com/Vaithorat/CryptoCurrency-Dashboard",
     imageUrl: crypto,
     deployment: "https://cryptodashboard-alma.netlify.app/",
-    intro:
-      "A Dall-E Api based image generator that either generates a random prompt or takes prompt from user to generate images",
+    intro: "A crypto-currency dashboard that shows realtime chart data for cryptocurrencies ",
+     
   },
   {
     name: "ai",
@@ -26,7 +26,7 @@ const source = [
     imageUrl: ai,
     deployment: "https://dalleimggen.netlify.app/",
     intro:
-      "A crypto-currency dashboard that shows realtime chart data for cryptocurrencies ",
+      "A Dall-E Api based image generator that either generates a random prompt or takes prompt from user to generate images"
   },
   {
     name: "social",

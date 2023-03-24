@@ -9,12 +9,12 @@ const Projects = (props) => {
         <div className="mt-2 ">{props.intro}</div>
         <div className="flex justify-around mt-4 mx-8 gap-8">
           <div className="border-2 p-2 rounded-xl w-full hover:bg-[#191629]">
-            <Link to={props.github} className="flex justify-center ">
+            <Link to={props.github} target="_blank" rel="noopener noreferrer" className="flex justify-center ">
               Github
             </Link>
           </div>
           <div className="border-2 p-2 rounded-xl w-full hover:bg-[#191629]">
-            <Link to={props.deployment} className="flex justify-center">
+            <Link to={props.deployment} target="_blank" rel="noopener noreferrer"  className="flex justify-center">
               Deployment
             </Link>
           </div>
