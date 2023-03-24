@@ -5,7 +5,7 @@ const Projects = (props) => {
   return (
     <div>
       <div className="flex-col justify-center gap-6 my-16 w-[25vw] font-mono text-sm text-[#F6E8EA] ">
-        <img src={props.imageUrl} alt={props.name} className="  rounded-xl" />
+        <img src={props.imageUrl} alt={props.name} className=" rounded-xl hover:w-[30vw]" />
         <div className="mt-2 ">{props.intro}</div>
         <div className="flex justify-around mt-4 mx-8 gap-8">
           <div className="border-2 p-2 rounded-xl w-full hover:bg-[#191629]">

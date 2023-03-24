@@ -21,7 +21,7 @@ const Navbar = () => {
           <li className="flex gap-6">
             {links.map((link, index) => (
               <a key={index} href="link.url">
-                {`• ${link.text}`}
+                {`${link.text}`}
               </a>
             ))}
           </li>
