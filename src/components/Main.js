@@ -1,25 +1,20 @@
 import React from "react";
-const photo = require("./images/photo.jpg");
+import photo from "./images/photo.jpg";
+
 const Main = () => {
   return (
-    <>
-      <div className="flex justify-center items-center mt-[20vh]">
-        <div className="flex-col flex gap-4 w-[40%]  text-[#F6E8EA]">
-          <div className="text-lg font-mono">Hello There, I am</div>
-          <div className="text-4xl font-serif text-[#ffffff] font-bold">Vaibhav Thorat.</div>
-          <div className="text-xl w-[35vw] font-mono text-justify">
-            I am a Fullstack Web Developer with MERN Stack. Currently residing
-            in Amravati, Maharashtra. I am currently working as a Production
-            Manager at JH Film Production.
-          </div>
-          <div></div>
-        </div>
-        <div className="w-[30%] flex justify-start bg-[#242038]">
-          <img src={photo} alt="profilePic" className=" w-[8vw] rounded-2xl shadow-2xl" />
+    <div className="flex flex-col items-center md:flex-row md:justify-center md:items-center mt-10 md:mt-20">
+      <div className="flex flex-col gap-4 text-white md:mr-10 md:w-1/2">
+        <div className="text-lg font-mono">Hello There, I am</div>
+        <div className="text-4xl font-serif font-bold animate-pulse">Vaibhav Thorat.</div>
+        <div className="text-xl w-full md:w-3/4 font-mono text-justify">
+          I am a <span className="text-green-400">Fullstack Web Developer</span> with <span className="text-green-400">MERN Stack</span>. Currently residing in <span className="text-green-400">Amravati, Maharashtra</span>. I am currently working as a Production Manager at <span className="text-green-400">JH Film Production</span>.
         </div>
       </div>
- 
-    </>
+      <div className="flex justify-start md:justify-center rounded-xl shadow-xl max-w-xs">
+        <img src={photo} alt="profilePic" className="sm:w-1/2 md:w-1/2 rounded-2xl" />
+      </div>
+    </div>
   );
 };
 

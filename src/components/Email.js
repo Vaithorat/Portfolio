@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import emailjs from "emailjs-com";
 
 export const Email = () => {
   const form = useRef();
@@ -28,10 +28,10 @@ export const Email = () => {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="text-[#F6E8EA] max-w-md mx-auto my-8 "
+      className="max-w-sm mx-auto my-8 p-4 bg-white shadow-lg rounded-lg"
     >
-      <div className="mb-4">
-        <label className="block  font-bold mb-2">Name</label>
+      <div className="mb-4 ">
+        <label className="block font-bold mb-2">Name</label>
         <input
           type="text"
           name="user_name"
@@ -60,7 +60,7 @@ export const Email = () => {
       <input
         type="submit"
         value="Send"
-        className=" flex justify-center w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
       />
     </form>
   );

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="fixed justify-center bottom-2 left-2 flex flex-col text-[#F6E8EA] text-3xl gap-4">
+    <div className="fixed bottom-2 left-2 flex flex-col text-[#F6E8EA] text-3xl gap-4">
       <Link
         to="https://github.com/Vaithorat"
         target="_blank"
