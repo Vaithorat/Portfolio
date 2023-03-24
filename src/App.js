@@ -41,7 +41,7 @@ const source = [
 function App() {
   
   return (
-    <div className="App bg-[#242038] h-full flex">
+    <div className="App bg-[#131022] h-full flex">
       <div>
         <Sidebar />
       </div>

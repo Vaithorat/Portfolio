@@ -28,7 +28,7 @@ const About = () => {
   return (
     <div className="flex-col flex items-center justify-center mt-8 sm:mt-12 text-[#F6E8EA]">
       <div className="flex items-center flex-col sm:flex-row">
-        <div className="text-4xl my-4 sm:my-12 w-8 sm:ml-[34vw] sm:w-auto">
+        <div className="text-4xl my-4 sm:my-12 sm:ml-[34vw] sm:w-auto md:w-auto">
           ABOUT ME
         </div>
         <div className="container flex justify-center items-center ">
@@ -50,6 +50,9 @@ const About = () => {
       </div>
       <div
         onClick={toggleShowTechnologies}
+        onMouseOver={toggleShowTechnologies}
+        onTouchStart={toggleShowTechnologies}
+        onTouchEnd={toggleShowTechnologies}
         className="text-2xl font-bold mt-8 sm:mt-[12vh] cursor-pointer hover:text-blue-500 transition duration-300"
       >
         Here are the technologies that I worked with
@@ -59,7 +62,9 @@ const About = () => {
           <div className="flex-col gap-2 flex">
             <div
               className="text-2xl font-bold mt-8 sm:mt-[12vh] mb-4 sm:mb-8 cursor-pointer hover:text-blue-500 transition duration-1000 ease-in-out"
-              onClick={toggleLanguagesVisible}
+              onMouseOver={toggleLanguagesVisible}
+              onTouchStart={toggleLanguagesVisible}
+              onTouchEnd={toggleLanguagesVisible}
             >
               Languages
             </div>
@@ -74,7 +79,9 @@ const About = () => {
           <div className="flex-col gap-2 flex">
             <div
               className="text-2xl font-bold mt-8 sm:mt-[12vh] mb-4 sm:mb-8  cursor-pointer hover:text-blue-500 transition duration-1000 ease-in-out"
-              onClick={toggleLibrariesVisible}
+              onMouseOver={toggleLibrariesVisible}
+              onTouchStart={toggleLibrariesVisible}
+              onTouchEnd={toggleLibrariesVisible}
             >
               Libraries
             </div>
@@ -90,7 +97,9 @@ const About = () => {
           <div className="flex-col gap-2 flex">
             <div
               className="text-2xl font-bold mt-8 sm:mt-[12vh] mb-4 sm:mb-8 cursor-pointer hover:text-blue-500 transition duration-1000 ease-in-out"
-              onClick={toggleFrameworksVisible}
+              onMouseOver={toggleFrameworksVisible}
+              onTouchStart={toggleFrameworksVisible}
+              onTouchEnd={toggleFrameworksVisible}
             >
               Frameworks
             </div>
@@ -104,7 +113,9 @@ const About = () => {
           <div className="flex-col gap-2 flex">
             <div
               className="text-2xl font-bold mt-8 sm:mt-[12vh] mb-4 sm:mb-8 cursor-pointer hover:text-blue-500 transition duration-1000 ease-in-out"
-              onClick={toggleDatabaseVisible}
+              onTouchStart={toggleDatabaseVisible}
+              onTouchEnd={toggleDatabaseVisible}
+              onMouseOver={toggleDatabaseVisible}
             >
               Database
             </div>

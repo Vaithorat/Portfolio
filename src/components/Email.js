@@ -28,7 +28,7 @@ export const Email = () => {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="max-w-sm mx-auto my-8 p-4 bg-white shadow-lg rounded-lg"
+      className="max-w-sm mx-auto my-8 p-4 text-white border-white border-2 shadow-lg rounded-lg"
     >
       <div className="mb-4 ">
         <label className="block font-bold mb-2">Name</label>
