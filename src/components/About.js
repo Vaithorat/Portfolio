@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CSSTransition } from "react-transition-group";
 
 const About = () => {
   const [showTechnologies, setShowTechnologies] = useState(false);
@@ -50,90 +51,107 @@ const About = () => {
       </div>
       <div
         onClick={toggleShowTechnologies}
-        onMouseOver={toggleShowTechnologies}
+        onMouseEnter={toggleShowTechnologies}
         onTouchStart={toggleShowTechnologies}
         onTouchEnd={toggleShowTechnologies}
-        className="text-2xl px-4 font-bold mt-8 sm:mt-[12vh] cursor-pointer hover:text-blue-500 transition duration-300"
-      >
+        className="flex flex-col justify-center items-center sm:items-start md:items-start text-3xl px-4 font-bold mt-8 sm:mt-[12vh] cursor-pointer transition duration-1000 ease-in-out hover:text-blue-500"
+      > 
         Here are the technologies that I worked with
       </div>
       {showTechnologies && (
-      <ul className="flex flex-col sm:flex-row justify-center gap-[4vw] text-lg items-start sm:items-start md:items-start">
-      <div className="flex-col gap-2 flex sm:items-center">
-        <div
-          className="text-2xl font-bold mt-8 sm:mt-[12vh] mb-4 sm:mb-8 cursor-pointer hover:text-blue-500 transition duration-1000 ease-in-out"
-          onMouseOver={toggleLanguagesVisible}
-          onTouchStart={toggleLanguagesVisible}
-          onTouchEnd={toggleLanguagesVisible}
-        >
-          Languages
-        </div>
-        {languagesVisible && (
-          <ul className="flex flex-col justify-center text-lg mt-2 items-center sm:items-start md:items-start transition duration-300 ease-in-out">
-            <li>Javascript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        )}
-      </div>
-      <div className="flex-col gap-2 flex sm:items-center">
-        <div
-          className="text-2xl font-bold mt-8 sm:mt-[12vh] mb-4 sm:mb-8  cursor-pointer hover:text-blue-500 transition duration-1000 ease-in-out"
-          onMouseOver={toggleLibrariesVisible}
-          onTouchStart={toggleLibrariesVisible}
-          onTouchEnd={toggleLibrariesVisible}
-        >
-          Libraries
-        </div>
-        {librariesVisible && (
-          <ul className="flex flex-col justify-center text-lg mt-2 items-center sm:items-start md:items-start transition duration-300 ease-in-out">
-            <li>Tailwind</li>
-            <li>Bootstrap</li>
-            <li>ReactJs</li>
-            <li>Redux</li>
-          </ul>
-        )}
-      </div>
-      <div className="flex-col gap-2 flex sm:items-center">
-        <div
-          className="text-2xl font-bold mt-8 sm:mt-[12vh] mb-4 sm:mb-8 cursor-pointer hover:text-blue-500 transition duration-1000 ease-in-out"
-          onMouseOver={toggleFrameworksVisible}
-          onTouchStart={toggleFrameworksVisible}
-          onTouchEnd={toggleFrameworksVisible}
-        >
-          Frameworks
-        </div>
-        {frameworksVisible && (
-          <ul className="flex justify-center flex-col text-lg mt-2 items-center sm:items-start md:items-start transition duration-300 ease-in-out">
-            <li>Node.js</li>
-            <li>Express.js</li>
-          </ul>
-        )}
-      </div>
-      <div className="flex-col gap-2 flex sm:items-center">
-        <div
-          className="text-2xl font-bold mt-8 sm:mt-[12vh] mb-4 sm:mb-8 cursor-pointer hover:text-blue-500 transition duration-1000 ease-in-out"
-          onTouchStart={toggleDatabaseVisible}
-          onTouchEnd={toggleDatabaseVisible}
-          onMouseOver={toggleDatabaseVisible}
-        >
-          Database
-        </div>
-        <div
-          className={`${
-            databaseVisible ? "block" : "hidden"
-          } transition-all duration-100`}
-        >
-          <ul className="flex flex-col justify-center text-lg mt-2 items-center sm:items-start md:items-start">
-            <li>MySQL</li>
-            <li>MongoDB</li>
-          </ul>
-        </div>
-      </div>
-    </ul>
-    
+        <ul className="flex flex-col sm:flex-row justify-center gap-[4vw] text-lg items-start sm:items-start md:items-start">
+          <div className="flex-col gap-2 flex sm:items-center">
+            <div
+              className="text-2xl font-bold mt-8 sm:mt-[12vh] mb-4 sm:mb-8 cursor-pointer hover:text-blue-500 transition duration-1000 ease-in-out"
+              onMouseOver={toggleLanguagesVisible}
+              onTouchStart={toggleLanguagesVisible}
+              onTouchEnd={toggleLanguagesVisible}
+            >
+              Languages
+            </div>
+            <CSSTransition
+              in={languagesVisible}
+              classNames="dropdown"
+              timeout={300}
+              unmountOnExit
+            >
+              <ul className="flex flex-col justify-center text-lg mt-2 items-center sm:items-start md:items-start">
+                <li>Javascript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </CSSTransition>
+          </div>
+          <div className="flex-col gap-2 flex sm:items-center">
+            <div
+              className="text-2xl font-bold mt-8 sm:mt-[12vh] mb-4 sm:mb-8  cursor-pointer hover:text-blue-500 transition duration-1000 ease-in-out"
+              onMouseOver={toggleLibrariesVisible}
+              onTouchStart={toggleLibrariesVisible}
+              onTouchEnd={toggleLibrariesVisible}
+            >
+              Libraries
+            </div>
+
+            <CSSTransition
+              in={librariesVisible}
+              classNames="dropdown"
+              timeout={300}
+              unmountOnExit
+            >
+              <ul className="flex flex-col justify-center text-lg mt-2 items-center sm:items-start md:items-start">
+                <li>Tailwind</li>
+                <li>Bootstrap</li>
+                <li>ReactJs</li>
+                <li>Redux</li>
+              </ul>
+            </CSSTransition>
+          </div>
+          <div className="flex-col gap-2 flex sm:items-center">
+            <div
+              className="text-2xl font-bold mt-8 sm:mt-[12vh] mb-4 sm:mb-8 cursor-pointer hover:text-blue-500 transition duration-1000 ease-in-out"
+              onMouseOver={toggleFrameworksVisible}
+              onTouchStart={toggleFrameworksVisible}
+              onTouchEnd={toggleFrameworksVisible}
+            >
+              Frameworks
+            </div>
+            
+            <CSSTransition
+              in={frameworksVisible}
+              classNames="dropdown"
+              timeout={300}
+              unmountOnExit
+            >
+              <ul className="flex flex-col justify-center text-lg mt-2 items-center sm:items-start md:items-start">
+                <li>Node.js</li>
+                <li>Express.js</li>
+              </ul>
+            </CSSTransition>
+          </div>
+          <div className="flex-col gap-2 flex sm:items-center">
+            <div
+              className="text-2xl font-bold mt-8 sm:mt-[12vh] mb-4 sm:mb-8 cursor-pointer hover:text-blue-500 transition duration-1000 ease-in-out"
+              onTouchStart={toggleDatabaseVisible}
+              onTouchEnd={toggleDatabaseVisible}
+              onMouseOver={toggleDatabaseVisible}
+            >
+              Database
+            </div>
+              <CSSTransition
+                in={databaseVisible}
+                classNames="dropdown"
+                timeout={300}
+                unmountOnExit
+              >
+                <ul className="flex flex-col justify-center text-lg mt-2 items-center sm:items-start md:items-start">
+                  <li>MySQL</li>
+                  <li>MongoDB</li>
+                </ul>
+              </CSSTransition>
+            </div>
+        </ul>
       )}
-      <div className="text-4xl flex px-4 justify-center mt-8 sm:mt-[15vh]">
+      <div className="text-4xl flex px-4 justify-center mt-8 sm:mt-[15vh] font-bold">
         Here's Some of My Work
       </div>
     </div>
