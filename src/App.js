@@ -9,6 +9,8 @@ import social from "./components/images/3.jfif";
 import About from "./components/About";
 import GetInTouch from "./components/GetInTouch";
 import { Email } from "./components/Email";
+import { Dna } from "react-loader-spinner";
+import { useEffect, useState } from "react";
 
 const source = [
   {
@@ -38,31 +40,46 @@ const source = [
 ];
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
   return (
     <div className="App bg-[#131022] h-full flex">
-      <div>
-        <Sidebar />
-      </div>
-      <div className="w-full">
-        <Navbar />
-        <Main />
-        <About />
-        <div className="flex flex-wrap justify-center gap-12 md:justify-center">
-          {source.map((item) => (
-            <Projects
-              key={item.name}
-              src={item.name}
-              imageUrl={item.imageUrl}
-              intro={item.intro}
-              github={item.github}
-              deployment={item.deployment}
-            />
-          ))}
+      {loading ? (
+        <div className="flex justify-center items-center w-full h-screen">
+          <Dna visible={true} height="120" width="120" ariaLabel="dna-loading" />
         </div>
+      ) : (
+        <>
+          <div>
+            <Sidebar />
+          </div>
+          <div className="w-full">
+            <Navbar />
+            <Main />
+            <About />
+            <div className="flex flex-wrap justify-center gap-12 md:justify-center">
+              {source.map((item) => (
+                <Projects
+                  key={item.name}
+                  src={item.name}
+                  imageUrl={item.imageUrl}
+                  intro={item.intro}
+                  github={item.github}
+                  deployment={item.deployment}
+                />
+              ))}
+            </div>
 
-        <GetInTouch />
-        <Email />
-      </div>
+            <GetInTouch />
+            <Email />
+          </div>
+        </>
+      )}
     </div>
   );
 }
