@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <>
       <div className="fixed w-full flex justify-between items-center px-4 shadow-2xl z-10 bg-[#0a192f] text-gray-300">
-        <img src={Logo} alt="logo" className="w-[70px]" />
+        <img src={Logo} alt="logo" className="w-[50px]" />
         <div>
           <ul className="hidden md:flex py-4">
             <li>
