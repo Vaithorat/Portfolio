@@ -26,3 +26,12 @@
         rgba(10, 25, 47, 0.8)
       ) !important;
 }
+.intro {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .intro.visible {
+    opacity: 1;
+  }
+  
