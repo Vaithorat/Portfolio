@@ -8,8 +8,8 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-end items-center px-4 bg-[#0a192f] text-gray-300">
-      <ul className="hidden md:flex">
+    <div className="fixed w-full flex justify-end items-center px-4 bg-[#0a192f] text-gray-300">
+      <ul className="hidden md:flex py-4">
         <li>
           <Link to="home" smooth={true} duration={500}>
             Home

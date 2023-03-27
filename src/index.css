@@ -15,7 +15,7 @@
 }
 
 .content-div {
-    @apply relative flex justify-center items-center w-full h-56 bg-cover bg-center transition-all duration-300 ease-in-out;
+    @apply relative flex justify-center items-center w-fit h-full bg-cover bg-center transition-all duration-300 ease-in-out;
 }
 
 .content-div:hover {
