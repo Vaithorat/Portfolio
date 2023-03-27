@@ -2,26 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.dropdown-enter {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  
-  .dropdown-enter-active {
-    opacity: 1;
-    transform: translateY(0px);
-    transition: opacity 300ms ease-in-out, transform 300ms ease-in;
-  }
-  
-  .dropdown-exit {
-    opacity: 1;
-    transform: translateY(0px);
-    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
-  }
-  
-  .dropdown-exit-active {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  
-  

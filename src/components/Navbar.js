@@ -8,7 +8,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="fixed w-full flex justify-end items-center px-4 bg-[#0a192f] text-gray-300">
+    <div className="fixed w-full flex justify-end items-center px-4 shadow-2xl z-10 bg-[#0a192f] text-gray-300">
       <ul className="hidden md:flex py-4">
         <li>
           <Link to="home" smooth={true} duration={500}>
@@ -37,7 +37,7 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <div onClick={handleClick} className="md:hidden z-10">
+      <div onClick={handleClick} className="md:hidden mt-4 z-10">
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
 
