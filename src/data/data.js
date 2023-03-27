@@ -9,6 +9,7 @@ export const data = [
     image: crypto,
     github: "https://github.com/Vaithorat/CryptoCurrency-Dashboard",
     live: "https://cryptodashboard-alma.netlify.com/",
+    intro: "Live cryptocurrency price tracking app"
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const data = [
     image: ai,
     github: "https://github.com/Vaithorat/AiImageGenerator",
     live: "https://dalleimggen.netlify.app/",
+    intro: "AI image generator using prompts"
   },
   {
     id: 3,
@@ -23,5 +25,6 @@ export const data = [
     image: social,
     github: "https://github.com/Vaithorat/SocialMediaApp",
     live: "https://retrogramsocial.netlify.app/",
+    intro: "Create profile, add friends and more on Retrogram"
   },
 ];

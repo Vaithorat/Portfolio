@@ -25,8 +25,8 @@ export const Email = () => {
   };
 
   return (
-    <>
-      <div name="contact" className="text-white flex justify-center text-4xl font-bold">Email me via </div>
+    <div className="bg-[#0a192f] ">
+      <div name="contact" className=" text-white flex justify-center text-4xl font-bold">Email me via </div>
       <form
         ref={form}
         onSubmit={sendEmail}
@@ -65,6 +65,6 @@ export const Email = () => {
           className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         />
       </form>
-    </>
+    </div>
   );
 };
