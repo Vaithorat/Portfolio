@@ -1,39 +1,117 @@
-import React from "react";
-import { Link } from "react-scroll";
-import { FaFileDownload } from "react-icons/fa";
+import React, { useState } from 'react';
+import {
+  FaBars,
+  FaTimes,
+  FaGithub,
+  FaLinkedin,
+} from 'react-icons/fa';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
-  const links = [
-    { text: "About", to: "about" },
-    { text: "Technologies", to: "technologies" },
-    { text: "Contact", to: "contact" },
-  ];
-
-  const handleResumeDownload = () => {
-    window.open(
-      "https://drive.google.com/file/d/1MueAT6fVmV508OBt_dhDh8qrhof5O_qs/view?usp=sharing",
-      "_blank"
-    );
-  };
+  const [nav, setNav] = useState(false);
+  const handleClick = () => setNav(!nav);
 
   return (
-    <div className="flex justify-between px-5 py-2 text-[#F6E8EA] items-center shadow-xl flex-col md:flex-row">
-      <ul className="flex gap-6 items-center my-3">
-        {links.map((link, index) => (
-          <li key={index}>
-            <Link to={link.to} smooth={true} duration={500}>
-              {link.text}
-            </Link>
-          </li>
-        ))}
+    <div className='fixed w-full h-[80px] flex justify-end items-center px-4 bg-[#0a192f] text-gray-300'>
+      <ul className='hidden md:flex'>
+        <li>
+          <Link to='home' smooth={true} duration={500}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to='about' smooth={true} duration={500}>
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to='skills' smooth={true} duration={500}>
+            Skills
+          </Link>
+        </li>
+        <li>
+          <Link to='work' smooth={true} duration={500}>
+            Work
+          </Link>
+        </li>
+        <li>
+          <Link to='contact' smooth={true} duration={500}>
+            Contact
+          </Link>
+        </li>
       </ul>
-      <button
-        onClick={handleResumeDownload}
-        className="border-2 px-4 py-1 flex rounded-lg items-center"
+
+      <div onClick={handleClick} className='md:hidden z-10'>
+        {!nav ? <FaBars /> : <FaTimes />}
+      </div>
+
+      <ul
+        className={
+          !nav
+            ? 'hidden'
+            : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
+        }
       >
-        <FaFileDownload className="mr-2" />
-        Resume
-      </button>
+        <li className='py-6 text-4xl'>
+          <Link onClick={handleClick} to='home' smooth={true} duration={500}>
+            Home
+          </Link>
+        </li>
+        <li className='py-6 text-4xl'>
+          {' '}
+          <Link onClick={handleClick} to='about' smooth={true} duration={500}>
+            About
+          </Link>
+        </li>
+        <li className='py-6 text-4xl'>
+          {' '}
+          <Link onClick={handleClick} to='skills' smooth={true} duration={500}>
+            Skills
+          </Link>
+        </li>
+        <li className='py-6 text-4xl'>
+          {' '}
+          <Link onClick={handleClick} to='work' smooth={true} duration={500}>
+            Work
+          </Link>
+        </li>
+        <li className='py-6 text-4xl'>
+          {' '}
+          <Link onClick={handleClick} to='contact' smooth={true} duration={500}>
+            Contact
+          </Link>
+        </li>
+      </ul>
+
+      <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
+        <ul>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
+            <a
+              className='flex justify-between items-center w-full text-gray-300'
+              href='https://www.linkedin.com/in/vaibhav-thorat/'
+            >
+              Linkedin <FaLinkedin size={30} />
+            </a>
+          </li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
+            <a
+              className='flex justify-between items-center w-full text-gray-300'
+              href='https://github.com/Vaithorat'
+            >
+              Github <FaGithub size={30} />
+            </a>
+          </li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
+            <a
+              className='flex justify-between items-center w-full text-gray-300'
+              href='https://drive.google.com/file/d/1MueAT6fVmV508OBt_dhDh8qrhof5O_qs/view?usp=share_link'
+            >
+              Resume <BsFillPersonLinesFill size={30} />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

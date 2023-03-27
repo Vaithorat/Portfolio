@@ -1,33 +1,31 @@
-import React from "react";
-import photo from "./images/photo.jpg";
+import React from 'react';
+import { HiArrowNarrowRight } from 'react-icons/hi';
 
-const Main = () => {
+const Home = () => {
   return (
-    <div className="flex flex-col items-center md:flex-row md:justify-center md:items-center mt-10 md:mt-20">
-      <div className="flex flex-col gap-4 text-white md:mr-2 md:w-1/2 sm:mx-8 px-4 sm:px-0">
-        <div className="text-lg font-mono sm:ml-3/4">Hello There, I am</div>
-        <div className="text-4xl font-serif font-bold animate-pulse">
-          Vaibhav Thorat.
+    <div name='home' className='w-full h-screen bg-[#0a192f]'>
+      <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
+        <p className='text-pink-600'>Hi, my name is</p>
+        <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>
+          Vaibhav Thorat
+        </h1>
+        <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>
+          I'm a Full Stack Developer.
+        </h2>
+        <p className='text-[#8892b0] py-4 max-w-[700px]'>
+        I am a Fullstack Web Developer with MERN Stack. Currently residing in Amravati, Maharashtra. I am currently working as a Production Manager at JH Film Production.
+        </p>
+        <div>
+          <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>
+            View Work
+            <span className='group-hover:rotate-90 duration-300'>
+              <HiArrowNarrowRight className='ml-3 ' />
+            </span>
+          </button>
         </div>
-        <div className="text-xl w-full md:w-3/4 font-mono text-justify">
-          I am a <span className="text-green-400">Fullstack Web Developer</span>{" "}
-          with <span className="text-green-400">MERN Stack</span>. Currently
-          residing in{" "}
-          <span className="text-green-400">Amravati, Maharashtra</span>. I am
-          currently working as a Production Manager at{" "}
-          <span className="text-green-400">JH Film Production</span>.
-        </div>
-      </div>
-
-      <div className="flex justify-center md:justify-center rounded-xl max-w-xs">
-        <img
-          src={photo}
-          alt="profilePic"
-          className="w-1/2 md:w-1/3 lg:w-1/2 shadow-lg md:justify-center rounded-2xl"
-        />
       </div>
     </div>
   );
 };
 
-export default Main;
+export default Home;
