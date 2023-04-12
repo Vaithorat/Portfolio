@@ -16,8 +16,8 @@ const Home = () => {
         <p className="text-[#8892b0] py-4 max-w-[690px]">
           I am working on{" "}
           <span className="text-[#3D9239] font-bold"> MERN Stack </span>. I am
-          currently residing in Amravati, Maharashtra and working as a
-          Production Manager at JH Film Production.
+          currently residing in Amravati, Maharashtra. I have previously worked as 
+          a Production Manager at J.H. Film Production and completed internship at Almabetter.
         </p>
         <Link
           to="https://drive.google.com/file/d/1MueAT6fVmV508OBt_dhDh8qrhof5O_qs/view?usp=share_link"
