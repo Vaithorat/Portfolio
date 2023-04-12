@@ -33,12 +33,12 @@ const About = () => {
             <p>
               Later, I developed an interest in Web Development and started
               learning through online resources like The Odin Project. To
-              further enhance my skills and build real-world projects, I
-              enrolled in Almabetter's Full-stack boot camp. As a result, I have
-              gained expertise in front-end technologies like HTML, CSS,
-              JavaScript, React as well as back-end technologies like Node.js
-              and MongoDB. I'm always keen to learn and implement new
-              technologies to create efficient and elegant web solutions.
+              further enhance my skills and build real-world projects, I worked
+              as an intern at Almabetter. As a result, I have gained expertise
+              in front-end technologies like HTML, CSS, JavaScript, React as
+              well as back-end technologies like Node.js and MongoDB. I'm always
+              keen to learn and implement new technologies to create efficient
+              and elegant web solutions.
             </p>
           </div>
         </div>
