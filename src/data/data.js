@@ -36,7 +36,7 @@ export const data = [
     name: "E-commerce Website",
     image: ecomm,
     github: "https://github.com/Vaithorat/bondsindia",
-    live: "https://ecommdemoproject.netlify.app/home",
+    live: "https://ecommdemoproject.netlify.app/",
     intro:
       "E-commerce website built using React, Redux-toolkit. Authentication is done using Firebase",
   },
